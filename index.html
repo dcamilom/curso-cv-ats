@@ -1,299 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Express: Crea tu Hoja de Vida ATS con IA</title>
-    <style>
-        :root {
-            --primary-color: #0d47a1; /* Azul oscuro profesional */
-            --secondary-color: #ff6f00; /* Naranja para llamados a la acción */
-            --text-color: #333;
-            --background-color: #f8f9fa;
-            --white-color: #ffffff;
-            --success-color: #28a745;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso Hoja de Vida con IA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.7;
-        }
+    header {
+      background-color: #1e293b;
+      padding: 2rem;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    header h1 {
+      color: #38bdf8;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .hero {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 60px 20px;
-            text-align: center;
-        }
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-        }
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
 
-        .hero h1 .check-mark {
-            color: var(--success-color);
-        }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-        }
+    .highlight {
+      background-color: #1e40af;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
 
-        .hero .subtitle {
-            font-weight: 600;
-        }
+    h2 {
+      color: #38bdf8;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--white-color);
-            padding: 15px 35px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            background-color: #e66000;
-        }
+    .cta-button {
+      display: inline-block;
+      background-color: #22c55e;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
 
-        .section {
-            padding: 50px 0;
-        }
+    .cta-button:hover {
+      background-color: #16a34a;
+    }
 
-        .section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
-        
-        .list-container {
-            max-width: 650px;
-            margin: 0 auto;
-            background: var(--white-color);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .custom-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .custom-list li {
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
-        .custom-list .icon {
-            font-size: 1.5rem;
-            margin-right: 15px;
-            color: var(--primary-color);
-            width: 25px;
-            text-align: center;
-        }
-
-        .includes-list .icon {
-            color: var(--success-color);
-        }
-
-        .section-gray {
-            background-color: #e9ecef;
-        }
-
-        .bonus-box {
-            background-color: #fff3e0;
-            border: 2px dashed var(--secondary-color);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .bonus-box h3 {
-            margin: 0 0 10px 0;
-            color: var(--primary-color);
-        }
-        
-        .investment-section {
-            text-align: center;
-            padding-bottom: 60px;
-        }
-
-        .investment-section .final-cta-link {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .faq-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 10px;
-        }
-
-        .faq-item details {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: var(--white-color);
-        }
-        
-        .faq-item summary {
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 15px;
-            cursor: pointer;
-            outline: none;
-            color: var(--primary-color);
-        }
-        
-        .faq-item div {
-            padding: 0 20px 20px 20px;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: var(--white-color);
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            .section h2 { font-size: 1.8rem; }
-            .cta-button { font-size: 1.1rem; padding: 12px 28px; }
-        }
-    </style>
+    footer {
+      background-color: #1e293b;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1><span class="check-mark">✅</span> Consigue más entrevistas con una hoja de vida optimizada por IA</h1>
-            <p>Aprende en menos de 15 minutos a crear un CV que supere los filtros automatizados (ATS) y atraiga a los reclutadores correctos.</p>
-            <p class="subtitle">¡Conviértete en la opción ideal y deja de ser ignorado!</p>
-            <a href="https://pay.hotmart.com/R100843168T?sck=HOTMART_PRODUCT_PAGE&off=f1huztbg&hotfeature=32&bid=1753628392463" class="cta-button">🔥 ¡Accede al curso ahora por solo $49.900!</a>
-        </div>
-    </header>
+  <header>
+    <h1>Optimiza tu Hoja de Vida con Inteligencia Artificial</h1>
+    <p>Curso Express para superar filtros ATS y destacar ante los reclutadores</p>
+  </header>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h2>📍 ¿Para quién es este curso?</h2>
-                <div class="list-container">
-                    <ul class="custom-list">
-                        <li><span class="icon">😥</span> Si llevas meses sin recibir respuestas laborales.</li>
-                        <li><span class="icon">🤖</span> Si tu hoja de vida no está adaptada a las nuevas tecnologías de selección.</li>
-                        <li><span class="icon">💡</span> Si no sabes cómo destacar tus logros frente a los robots de reclutamiento.</li>
-                        <li><span class="icon">🎯</span> Si quieres una estrategia clara para conseguir entrevistas reales.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <img class="hero-image" src="https://source.unsplash.com/featured/?resume,technology" alt="Curso de hoja de vida IA">
 
-        <section class="section section-gray">
-            <div class="container">
-                <h2>🚀 ¿Qué aprenderás?</h2>
-                 <div class="list-container">
-                    <ul class="custom-list">
-                        <li><span class="icon">🔍</span> Extraer palabras clave de una oferta y aplicarlas en tu hoja de vida con IA.</li>
-                        <li><span class="icon">✍️</span> Redactar cada sección como un profesional: perfil, experiencia, logros, etc. con ayuda de la IA.</li>
-                        <li><span class="icon">🧠</span> Usar inteligencia artificial (ChatGPT) para redactar y optimizar tu CV.</li>
-                        <li><span class="icon">📄</span> Obtener una plantilla editable, validada y lista para enviar.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <h2>📦 ¿Qué incluye el curso?</h2>
-                 <div class="list-container">
-                    <ul class="custom-list includes-list">
-                        <li><span class="icon">✅</span> Curso express en video</li>
-                        <li><span class="icon">✅</span> Plantilla de hoja de vida en formato ATS</li>
-                        <li><span class="icon">✅</span> Prompts listos para usar con IA (ChatGPT)</li>
-                        <li><span class="icon">✅</span> Acceso de por vida y actualizaciones futuras</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section section-gray">
-            <div class="container">
-                <h2>🎁 Bonos Especiales</h2>
-                <div class="bonus-box">
-                    <h3>Curso Completo de Excel de Básico a Financiero</h3>
-                    <p>Como bono adicional, recibirás acceso a una recopilación de videotutoriales de Excel, una de las herramientas más potentes para crecer en el ambiente laboral. <strong>(Valorado en $49.900, para ti es completamente gratis con esta compra).</strong></p>
-                </div>
-            </div>
-        </section>
+  <section>
+    <div class="highlight">
+      <h2>¿Qué aprenderás?</h2>
+      <ul>
+        <li>Cómo identificar y aplicar palabras clave de ofertas laborales</li>
+        <li>Optimizar tu CV paso a paso con inteligencia artificial</li>
+        <li>Formato ATS listo para superar filtros de selección</li>
+        <li>Acceder a plantillas y prompts optimizados</li>
+      </ul>
+    </div>
 
-        <section class="section investment-section">
-            <div class="container">
-                 <h2>Una pequeña inversión para un gran salto profesional</h2>
-                 <p>Todo el conocimiento, las herramientas y los bonos por un único pago.</p>
-                <a href="URL_DE_PAGO_HOTMART" class="cta-button">👉 Sí, quiero mejorar mi hoja de vida ahora</a>
-            </div>
-        </section>
+    <h2>¿Por qué este curso?</h2>
+    <p>
+      Este curso es ideal para quienes quieren mejorar sus oportunidades laborales usando tecnología. No necesitas ser experto. En menos de una hora tendrás un CV profesional, optimizado y poderoso.
+    </p>
 
-        <section class="section">
-            <div class="container">
-                <h2>❓ Preguntas Frecuentes (FAQ)</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <details>
-                            <summary>¿Necesito saber de inteligencia artificial?</summary>
-                            <div>
-                                <p>No. Te explico paso a paso y desde cero cómo usar la IA para este propósito específico. No necesitas ninguna experiencia previa, solo seguir las instrucciones.</p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="faq-item">
-                        <details>
-                            <summary>¿Puedo hacerlo desde el celular?</summary>
-                            <div>
-                                <p>Sí. Todo el contenido del curso, las plantillas y las herramientas de IA recomendadas son 100% accesibles desde cualquier dispositivo: celular, tablet o computador.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://tucurso.com/comprar" class="cta-button">¡Quiero mi hoja de vida optimizada!</a>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 | Tu Marca o Nombre. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+  <footer>
+    © 2025 Curso Express - Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
