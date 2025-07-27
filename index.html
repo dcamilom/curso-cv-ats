@@ -2,81 +2,89 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso CV Ganador con IA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso Hoja de Vida ATS con IA</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
+      padding: 0;
+      background-color: #eaf6ff;
+      color: #1e3a8a;
     }
-    .section {
-      padding: 40px 20px;
+    header, section, footer {
+      padding: 2rem;
     }
-    .gradient {
-      background: linear-gradient(to right, #008aff, #00ffe7);
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
       color: white;
-    }
-    .alt-gradient {
-      background: linear-gradient(to right, #00ffe7, #008aff);
-      color: white;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
       text-align: center;
     }
-    h1, h2 {
-      margin-top: 0;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #1e40af;
+      margin-top: 2rem;
     }
     p {
-      line-height: 1.6;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li::before {
+      content: '✔️';
+      margin-right: 0.5rem;
+      color: #059669;
     }
     .cta-button {
       display: inline-block;
-      background-color: #ff4d00;
+      padding: 1rem 2rem;
+      background-color: #2563eb;
       color: white;
-      padding: 15px 25px;
-      margin: 20px 0;
-      font-size: 1.2em;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
       text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 1.5rem auto;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s;
     }
-    .img-content {
-      max-width: 100%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    .cta-button:hover {
+      background-color: #1e40af;
     }
     .faq {
-      text-align: left;
+      background-color: #f1f5f9;
+      border-radius: 8px;
+      padding: 1rem;
     }
-    @media (max-width: 480px) {
-      .cta-button {
-        font-size: 1em;
-        padding: 12px 20px;
-        word-break: keep-all;
-      }
+    .imagen-seccion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .imagen-seccion img {
+      max-width: 300px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>✅ Consigue más entrevistas con una hoja de vida optimizada por IA</h1>
+    <p>Aprende en menos de 15 minutos a crear un CV que supere los filtros automatizados (ATS) y atraiga a los reclutadores correctos.</p>
+    <p><strong>¡Conviértete en la opción ideal y deja de ser ignorado!</strong></p>
+    <a href="#" class="cta-button">🔥 ¡Accede al curso ahora por solo $49.900!</a>
+  </header>
 
-  <section class="section gradient">
-    <div class="container">
-      <h1>✅ Consigue más entrevistas con una hoja de vida optimizada por IA</h1>
-      <p>Aprende en menos de 15 minutos a crear un CV que supere los filtros automatizados (ATS) y atraiga a los reclutadores correctos.</p>
-      <p><strong>¡Conviértete en la opción ideal y deja de ser ignorado!</strong></p>
-      <a href="https://go.hotmart.com/LINK-DE-TU-CURSO" class="cta-button">🔥 ¡Accede al curso ahora por solo $49.900!</a>
-    </div>
-  </section>
-
-  <section class="section alt-gradient">
-    <div class="container">
+  <section class="imagen-seccion">
+    <div>
       <h2>📍 ¿Para quién es este curso?</h2>
       <ul>
         <li>Si llevas meses sin recibir respuestas laborales.</li>
@@ -84,54 +92,47 @@
         <li>Si no sabes cómo destacar tus logros frente a los robots de reclutamiento.</li>
         <li>Si quieres una estrategia clara para conseguir entrevistas reales.</li>
       </ul>
-      <img src="imagenes/publico.png" alt="Personas buscando trabajo" class="img-content" />
     </div>
+    <img src="https://via.placeholder.com/300x200" alt="CV ATS ejemplo" />
   </section>
 
-  <section class="section gradient">
-    <div class="container">
+  <section class="imagen-seccion">
+    <div>
       <h2>🚀 ¿Qué aprenderás?</h2>
       <ul>
         <li>Extraer palabras clave de una oferta y aplicarlas en tu hoja de vida con IA.</li>
-        <li>Redactar cada sección como un profesional: perfil, experiencia, logros, etc.</li>
+        <li>Redactar cada sección como un profesional: perfil, experiencia, logros, etc. con ayuda de la IA.</li>
         <li>Usar inteligencia artificial (ChatGPT) para redactar y optimizar tu CV.</li>
         <li>Obtener una plantilla editable, validada y lista para enviar.</li>
       </ul>
-      <img src="imagenes/aprendizaje.png" alt="Qué aprenderás" class="img-content" />
     </div>
+    <img src="https://via.placeholder.com/300x200" alt="Proceso con IA" />
   </section>
 
-  <section class="section alt-gradient">
-    <div class="container">
-      <h2>📦 ¿Qué incluye el curso?</h2>
-      <ul>
-        <li>✅ Curso express en video</li>
-        <li>✅ Plantilla de hoja de vida en formato ATS</li>
-        <li>✅ Prompts listos para usar con IA (ChatGPT)</li>
-        <li>✅ Acceso de por vida y actualizaciones futuras</li>
-      </ul>
-      <img src="imagenes/contenido.png" alt="Contenido del curso" class="img-content" />
-    </div>
+  <section>
+    <h2>📦 ¿Qué incluye el curso?</h2>
+    <ul>
+      <li>Curso express en video</li>
+      <li>Plantilla de hoja de vida en formato ATS</li>
+      <li>Prompts listos para usar con IA (ChatGPT)</li>
+      <li>Acceso de por vida y actualizaciones futuras</li>
+    </ul>
   </section>
 
-  <section class="section gradient">
-    <div class="container">
-      <h2>🎁 Bonos</h2>
-      <p>Recopilación de video tutoriales del curso de Excel, desde básico hasta financiero (valorado en $50.000, incluido gratis en esta compra).</p>
-      <img src="imagenes/excel.png" alt="Bono curso Excel" class="img-content" />
-      <a href="https://go.hotmart.com/LINK-DE-TU-CURSO" class="cta-button">👉 Sí, quiero mejorar mi hoja de vida ahora</a>
-    </div>
+  <section>
+    <h2>🎁 Bonos</h2>
+    <p>Además del curso, recibirás <strong>GRATIS</strong> una recopilación exclusiva de tutoriales en video sobre <strong>Excel: desde básico hasta nivel financiero</strong>. Esta herramienta es una de las más valoradas en el entorno laboral actual.</p>
+    <p>💸 Valor normal: <del>$50.000</del> — Hoy incluido sin costo adicional con tu compra.</p>
   </section>
 
-  <section class="section alt-gradient">
-    <div class="container faq">
-      <h2>❓Preguntas frecuentes</h2>
-      <p><strong>¿Necesito saber de inteligencia artificial?</strong><br>
+  <section class="faq">
+    <h2>❓ Preguntas frecuentes</h2>
+    <p><strong>¿Necesito saber de inteligencia artificial?</strong><br />
       No. Te explico paso a paso cómo usarla sin ser experto.</p>
-      <p><strong>¿Puedo hacerlo desde el celular?</strong><br>
+    <p><strong>¿Puedo hacerlo desde el celular?</strong><br />
       Sí. Todo el contenido es 100% accesible desde cualquier dispositivo.</p>
-    </div>
   </section>
 
+  <a href="#" class="cta-button">👉 SÍ, QUIERO MEJORAR MI HOJA DE VIDA AHORA</a>
 </body>
 </html>
