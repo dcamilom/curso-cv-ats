@@ -1,92 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Curso de Hojas de Vida con IA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso CV con IA</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003247;
       color: #ffffff;
     }
 
     header {
       background-color: #003366;
-      padding: 40px 20px;
       text-align: center;
+      padding: 2rem;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
-      color: #ffffff;
+      font-size: 2.5rem;
     }
 
     .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: #003247;
-      padding: 30px;
-      border-radius: 8px;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .container h2 {
-      font-size: 26px;
-      color: #00CC66;
-    }
-
-    .container p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #f0f0f0;
-    }
-
-    .btn-comprar {
-      display: block;
+    .hero-img {
       width: 100%;
-      padding: 15px;
-      text-align: center;
-      background-color: #00CC66;
-      color: #003247;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      margin-top: 30px;
-      text-decoration: none;
+      border-radius: 12px;
+      margin-bottom: 2rem;
     }
 
-    .btn-comprar:hover {
-      background-color: #00b35a;
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      color: #00ccff;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #00ccff;
+      color: #003247;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00b0dd;
     }
 
     footer {
+      background-color: #002233;
       text-align: center;
-      padding: 20px;
-      background-color: #004766;
+      padding: 1rem;
+      font-size: 0.9rem;
       color: #ccc;
-      font-size: 14px;
     }
 
     @media screen and (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-
       header h1 {
-        font-size: 24px;
+        font-size: 1.8rem;
       }
 
-      .container h2 {
-        font-size: 22px;
-      }
-
-      .btn-comprar {
-        font-size: 16px;
-        padding: 12px;
+      .cta-button {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -94,24 +82,42 @@
 <body>
 
   <header>
-    <h1>Aprende a hacer tu hoja de vida con Inteligencia Artificial</h1>
+    <h1>Tu Hoja de Vida puede cambiar tu vida</h1>
+    <p>Diseña tu CV con inteligencia artificial y supera los filtros automáticos de selección</p>
   </header>
 
   <div class="container">
-    <h2>¿Quieres mejorar tu hoja de vida en menos de 30 minutos?</h2>
-    <p>Este curso exprés está diseñado para ti. Aprende paso a paso cómo usar herramientas de Inteligencia Artificial para crear una hoja de vida atractiva, profesional y optimizada para superar filtros automatizados (ATS).</p>
 
-    <p>Ideal si estás buscando trabajo y no sabes por dónde empezar o si quieres destacarte entre cientos de candidatos.</p>
+    <img src="https://raw.githubusercontent.com/dcamilom/curso-cv-ats/main/assets/Imagenes/Crea%20tu%20CV%20con%20IA.png" alt="Banner principal" class="hero-img"/>
 
-    <p>Sin rodeos, sin teoría innecesaria. Solo lo que necesitas para tener resultados reales.</p>
+    <div class="section">
+      <h2>¿Por qué este curso?</h2>
+      <p>
+        Porque te enseño paso a paso cómo hacer una hoja de vida optimizada con inteligencia artificial. Ya no se trata de solo llenar un formato bonito, sino de entender cómo funcionan los sistemas de selección y cómo puedes destacar con las herramientas correctas.
+      </p>
+    </div>
 
-    <a class="btn-comprar" href="https://pay.hotmart.com/R100843168T?sck=HOTMART_PRODUCT_PAGE&off=f1huztbg&hotfeature=32&bid=1753628392463" target="_blank">
-      ¡QUIERO EL CURSO AHORA!
-    </a>
+    <img src="https://raw.githubusercontent.com/dcamilom/curso-cv-ats/main/assets/Imagenes/Flux_Dev_Disea_una_imagen_realista_para_un_banner_digital_de_1_2(1).jpg" alt="Imagen curso" class="hero-img"/>
+
+    <div class="section">
+      <h2>¿Qué aprenderás?</h2>
+      <ul>
+        <li>Cómo funcionan los filtros ATS (Sistemas de Seguimiento de Candidatos).</li>
+        <li>Cómo crear un CV profesional con inteligencia artificial.</li>
+        <li>Trucos y consejos para destacar frente a reclutadores.</li>
+      </ul>
+    </div>
+
+    <img src="https://raw.githubusercontent.com/dcamilom/curso-cv-ats/main/assets/Imagenes/Flux_Dev_Disea_una_imagen_realista_para_un_banner_digital_de_1_3.jpg" alt="Imagen adicional" class="hero-img"/>
+
+    <div class="section" style="text-align: center;">
+      <a class="cta-button" href="https://pay.hotmart.com/R100843168T" target="_blank">¡Quiero aprender ahora!</a>
+    </div>
+
   </div>
 
   <footer>
-    © 2025 - Todos los derechos reservados.
+    © 2025 Camilo Mariño. Todos los derechos reservados.
   </footer>
 
 </body>
